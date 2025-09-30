@@ -1,4 +1,1 @@
-<img width="1920" height="1020" alt="PyCharmMiscProject – C__Users_Katya_OneDrive_Рабочий стол_Lab1 ipynb 24 09 2025 0_23_12" src="https://github.com/user-attachments/assets/3b753f6e-6b9f-494e-9f61-fe136611f95b" />
-<img width="1920" height="1020" alt="PyCharmMiscProject – C__Users_Katya_OneDrive_Рабочий стол_Lab1 ipynb 24 09 2025 0_22_15" src="https://github.com/user-attachments/assets/4ee18da1-ec54-4670-acc7-b19cd4731737" />
-<img width="1920" height="1020" alt="PyCharmMiscProject – C__Users_Katya_OneDrive_Рабочий стол_Lab1 ipynb 24 09 2025 0_23_48" src="https://github.com/user-attachments/assets/10ff3a03-bb6e-4e8b-8672-ba4b1b9a0bec" />
-<img width="1920" height="1020" alt="PyCharmMiscProject – C__Users_Katya_OneDrive_Рабочий стол_Lab1 ipynb 24 09 2025 0_23_37" src="https://github.com/user-attachments/assets/0f8d8cd3-9189-460d-b4ca-41135fffce88" />
+
