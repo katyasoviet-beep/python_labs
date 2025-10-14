@@ -9,4 +9,4 @@
   - Скриншоты: `images/lab02/`
   - *[README](scr/lab02/README.md)*
 
-![Gif](python_labs/for_readme/Котик програмист.gif)
+![Gif](for_readme/Котик програмист.gif)
