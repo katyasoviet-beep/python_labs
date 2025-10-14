@@ -8,3 +8,5 @@
   - Код: `scr/lab02/`
   - Скриншоты: `images/lab02/`
   - *[README](scr/lab02/README.md)*
+
+![GIF](for_readme/котик програмист.gif)
