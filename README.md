@@ -9,3 +9,4 @@
   - Скриншоты: `images/lab02/`
   - *[README](scr/lab02/README.md)*
 
+![Gif](
