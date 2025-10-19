@@ -15,4 +15,5 @@
 4. **Файлы: TXT/CSV и отчёты по текстовой статистике - ❌**
 5. **JSON и конвертации (JSON↔CSV, CSV→XLSX) - ❌**
 6. **CLI‑утилиты с argparse (cat/grep‑lite + конвертеры) - ❌**
+
 ![Gif](for_readme/Cat.gif)
