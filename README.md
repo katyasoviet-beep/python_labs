@@ -8,5 +8,9 @@
   - Код: `scr/lab02/`
   - Скриншоты: `images/lab02/`
   - *[README](scr/lab02/README.md)*
+3. **Тексты и частоты слов (словарь/множество)**
+  - Код: `scr/lab03/`
+  - Скриншоты: `images/lab03/`
+  - *[README](scr/lab03/README.md)*
 
 ![Gif](for_readme/Cat.gif)
