@@ -285,7 +285,7 @@ except ValueError as e:
 - `("Иванов Иван", "", 4.6)` → `ValueError`
 - `"Иванов Иван", "BIVT-25", "четыре")` → `TypeError`
 
-**Код:**
+### Код:
 ```
 from typing import Tuple
 StudentRecord = Tuple[str, str, float]
