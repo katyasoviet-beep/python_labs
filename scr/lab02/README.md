@@ -85,7 +85,7 @@ except TypeError as e:
     print(e)
 ```
 
-**Скриншот:**  
+**Скриншот (Тест кейс):**  
 ![Задание 1](../../images/lab02/arrays.png)
 
 ---
