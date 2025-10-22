@@ -344,7 +344,7 @@ except TypeError as e:
 ![Задание 3](../../images/lab02/tuples1.png)
 
 **Скриншот (Примеры некоректных записей):**  
-![Задание 3](../../images/lab02/tuples2.png)
+![Задание 3](../../images/lab02/tuples.png)
 
 
 ---
