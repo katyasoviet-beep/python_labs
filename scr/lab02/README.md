@@ -20,7 +20,7 @@
    «Расплющить» список списков/кортежей в один список по строкам (row-major).
    Если встретилась строка/элемент, который не является списком/кортежем — `TypeError`..  
 
-### Тест кейсы(минимум)
+### Тест кейсы(минимум):
 **min_max**
 - `[3, -1, 5, 5, 0]` → `(-1, 5)`
 - `[42]` → `(42, 42)`
@@ -56,9 +56,11 @@ def flatten(mat: list[list | tuple]) -> list:
         else:
             flat_list.extend(element)
     return flat_list
+```
 
-#        Тест кейсы
+**Тест кейсы(код):**
 
+```
 print('min_max')
 print(min_max([3, -1, 5, 5, 0]))
 print(min_max([42]))
@@ -85,8 +87,41 @@ except TypeError as e:
     print(e)
 ```
 
+**Свои примеры(код):**
+
+```
+print('min_max')
+print(min_max([4, -5, 10, 10, 3]))
+print(min_max([52]))
+print(min_max([-3, -8, -10]))
+try:
+    print(min_max([]))
+except ValueError as e:
+    print(e)
+print(min_max([5.7, 3, 3.0, -5.3]))
+
+print('unique_sorted')
+print(unique_sorted([4, 5, 8, 4, 5]))
+print(unique_sorted([]))
+print(unique_sorted([-6, -6, 0, 4, 4]))
+print(unique_sorted([4.0, 1.5, 6, 0]))
+
+print('flatten')
+print(flatten([[5, 4], [2, 7]]))
+print(flatten([[3, 5], (4, 7, 8)]))
+print(flatten([[3], [], [5, 8]]))
+try:
+    print(flatten([[5, 7], 'Грибочки']))
+except TypeError as e:
+    print(e)
+```
+
 **Скриншот (Тест кейс):**  
 ![Задание 1](../../images/lab02/arrays.png)
+
+**Скриншот (Свои примеры):**  
+![Задание 1](../../images/lab02/arrays1.png)
+
 
 ---
 
@@ -104,7 +139,7 @@ except TypeError as e:
 3. `col_sums(mat: list[list[float | int]]) -> list[float]`  
    Сумма по каждому столбцу. Требуется прямоугольность.
 
-### Тест кейсы (минимум)
+### Тест кейсы (минимум):
 **transpose**
 - `[[1, 2, 3]]` → `[[1], [2], [3]]`
 - `[[1], [2], [3]]` → `[[1, 2, 3]]`
@@ -124,7 +159,7 @@ except TypeError as e:
 - `[[0, 0], [0, 0]]` → `[0, 0]`
 - `[[1, 2], [3]]` → `ValueError` *(рваная)*
 
-**Код**
+### Код:
 ```
 def transpose(mat: list[list[float | int]]) -> list[list[float | int]]:
     if not mat:
@@ -156,9 +191,9 @@ def col_sums(mat: list[list[float | int]]) -> list[float]:
             raise ValueError("Рваная")
     return [sum(mat[i][j] for i in range(len(mat))) for j in range(num_cols)]
 
-
-#     Тест кейсы
-
+```
+**Тест кейсы(код):**
+```
 print('transpose')
 print(transpose([[1, 2, 3]]))
 print(transpose([[1], [2], [3]]))
@@ -187,9 +222,42 @@ try:
 except ValueError as e:
     print(e)
 ```
+**Свои примеры(код):**
+```
+print('transpose')
+print(transpose([[4, 6, 1]]))
+print(transpose([[5], [3], [7]]))
+print(transpose([[5, 3], [6, 1]]))
+print(transpose([]))
+try:
+    print(transpose([[2, 7], [4]]))
+except ValueError as e:
+    print(e)
 
-**Скриншот:**  
+print('row_sums')
+print(row_sums([[2, 1, 4], [5, 4, 1]]))
+print(row_sums([[-5, 5], [17, -17]]))
+print(row_sums([[0, 0], [0, 0]]))
+try:
+    print(row_sums([[7, 3], [5]]))
+except ValueError as e:
+    print(e)
+
+print('col_sums')
+print(col_sums([[5, 7, 2], [4, 3, 10]]))
+print(col_sums([[-3, 3], [14, -14]]))
+print(col_sums([[0, 0], [0, 0]]))
+try:
+    print(col_sums([[7, 3], [5]]))
+except ValueError as e:
+    print(e)
+```
+
+**Скриншот (Тест кейс):**  
 ![Задание 2](../../images/lab02/matrix.png)
+
+**Скриншот (Свои примеры):**  
+![Задание 2](../../images/lab02/matrix1.png)
 
 ---
 
@@ -207,7 +275,7 @@ except ValueError as e:
    - ФИО может быть `«Фамилия Имя Отчество»` или `«Фамилия Имя»` — инициалы формируются из 1–2 имён (в верхнем регистре).
    - Лишние пробелы нужно убрать (`strip`, «схлопнуть» внутри).
    - GPA печатается с **2 знаками** (округление правилами Python).
-### Тест кейсы(минимум)
+### Тест кейсы(минимум):
 - `("Иванов Иван Иванович", "BIVT-25", 4.6)` → `"Иванов И.И., гр. BIVT-25, GPA 4.60"`
 - `("Петров Пётр", "IKBO-12", 5.0)` → `"Петров П., гр. IKBO-12, GPA 5.00"`
 - `("Петров Пётр Петрович", "IKBO-12", 5.0)` → `"Петров П.П., гр. IKBO-12, GPA 5.00"`
@@ -217,7 +285,7 @@ except ValueError as e:
 - `("Иванов Иван", "", 4.6)` → `ValueError`
 - `"Иванов Иван", "BIVT-25", "четыре")` → `TypeError`
 
-**Код**
+**Код:**
 ```
 from typing import Tuple
 StudentRecord = Tuple[str, str, float]
@@ -234,13 +302,27 @@ def format_record(rec: StudentRecord) -> str:
     return formatted_record
 
 
+
+```
+**Тест кейсы(код):**
+```
 # Тест-кейсы
 print(format_record(("Иванов Иван Иванович", "BIVT-25", 4.6)))
 print(format_record(("Петров Пётр", "IKBO-12", 5.0)))
 print(format_record(("Петров Пётр Петрович", "IKBO-12", 5.0)))
 print(format_record(("  сидорова  анна   сергеевна ", "ABB-01", 3.999)))
 
-# Примеры некорректных записей
+```
+**Свои примеры(код)**
+```
+print(format_record(("Советская Екатерина Алексеевна", "BIVT-25", 4.3)))
+print(format_record(("Романов Николай", "IKBO-13", 5.0)))
+print(format_record(("Романов Николай Александрович", "IKBO-13", 5.0)))
+print(format_record(("       советская   екатерина     алексеевна   ", "BIVT-25", 4.3)))
+
+```
+**Примеры некоректных записей(код)**
+```
 try:
     print(format_record(("", "BIVT-25", 4.6)))
 except ValueError as e:
@@ -254,7 +336,15 @@ try:
 except TypeError as e:
     print(e)
 ```
-**Скриншот:**  
+
+**Скриншот (Тест кейсы):**  
 ![Задание 3](../../images/lab02/tuples.png)
+
+**Скриншот (Свои примеры):**  
+![Задание 3](../../images/lab02/tuples1.png)
+
+**Скриншот (Примеры некоректных записей):**  
+![Задание 3](../../images/lab02/tuples2.png)
+
 
 ---
