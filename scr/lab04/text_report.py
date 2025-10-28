@@ -1,5 +1,5 @@
-from io_txt_csv import read_text, write_csv
-from text import count_freq, top_n, normalize, tokenize
+from src.lab04.io_txt_csv import read_text, write_csv
+from src.lib.text import count_freq, top_n, normalize, tokenize
 from pathlib import Path
 
 def frequencies_from_text(text):
@@ -7,8 +7,8 @@ def frequencies_from_text(text):
     freq = count_freq(tokens)
     return tokens, freq
 
-in_path = Path("data/lab04/input.txt")
-out_path = Path("data/lab04/report.csv")
+in_path = Path("src/lab04/input.txt")
+out_path = Path("src/lab04/report.csv")
 
 text = read_text(in_path)
 tokens, freq = frequencies_from_text(text)
