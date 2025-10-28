@@ -12,7 +12,10 @@
   - Код: `scr/lab03/`
   - Скриншоты: `images/lab03/`
   - *[README](scr/lab03/README.md)*
-4. **Файлы: TXT/CSV и отчёты по текстовой статистике - ❌**
+4. **Файлы: TXT/CSV и отчёты по текстовой статистике - ❔**
+  - Код: `scr/lab04/`
+  - Скриншоты: `images/lab04/`
+  - *[README](scr/lab04/README.md)*
 5. **JSON и конвертации (JSON↔CSV, CSV→XLSX) - ❌**
 6. **CLI‑утилиты с argparse (cat/grep‑lite + конвертеры) - ❌**
 
