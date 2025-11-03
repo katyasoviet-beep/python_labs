@@ -122,7 +122,7 @@ Andrey,27,Novosibirsk
 ```
 **people_from_csv.json**
 
-![Задание 1](../../images/lab05/people_from_scv.png)
+![Задание 1](../../images/lab05/people_from_csv.png)
 
 **people.json**
 ```
