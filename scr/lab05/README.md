@@ -7,7 +7,7 @@
 
 ---
 
-## Задание A — модуль `src/lab05/json_csv.py`
+## Задание A — модуль `scr/lab05/json_csv.py`
 **Файл:** `json_csv.py`  
 **Реализуйте:** 
 ```python
@@ -66,7 +66,7 @@ def csv_to_json(csv_path: str, json_path: str) -> None:
 
 ---
 
-## Задание B — модуль `src/lab05/csv_xlsx.py`
+## Задание B — модуль `scr/lab05/csv_xlsx.py`
 **Файл:** `csv_xlsx.py`  
 **Реализуйте:** 
 ```python
