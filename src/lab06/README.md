@@ -211,22 +211,26 @@ if __name__ == "__main__":
 
 ![Задание 1](../../images/lab06/cli_text_cat-n.png)
 
-**stats**
+**stats -t1**
 
-![Задание 1](../../images/lab06/text_help.png)
+![Задание 1](../../images/lab06/cli_text_stat-t1.png)
 
 ### Задание 2.
 
 **help**
 
-![Задание 1](../../images/lab06/text_help.png)
+![Задание 1](../../images/lab06/convert_help.png)
 
 **json2csv**
 
-![Задание 1](../../images/lab06/text_help.png)
+![Задание 1](../../images/lab06/json-csv.png)
 
 **csv2json**
 
-![Задание 1](../../images/lab06/text_help.png)
+![Задание 1](../../images/lab06/csv-json.png)
+
+**csv2xlsx**
+
+![Задание 1](../../images/lab06/csv2xlsx.png)
 
 ---
