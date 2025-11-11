@@ -62,23 +62,23 @@ def main():
             sys.exit(1)
 
     except FileNotFoundError:
-        print(f"❌ Ошибка: файл не найден — '{input_path}'", file=sys.stderr)
+        print(f"Ошибка: файл не найден — '{input_path}'", file=sys.stderr)
         sys.exit(1)
 
     except PermissionError:
-        print(f"❌ Ошибка: нет прав на чтение файла — '{input_path}'", file=sys.stderr)
+        print(f"Ошибка: нет прав на чтение файла — '{input_path}'", file=sys.stderr)
         sys.exit(1)
 
     except IsADirectoryError:
-        print(f"❌ Ошибка: указан путь к папке, а не к файлу — '{input_path}'", file=sys.stderr)
+        print(f"Ошибка: указан путь к папке, а не к файлу — '{input_path}'", file=sys.stderr)
         sys.exit(1)
 
     except UnicodeDecodeError:
-        print(f"❌ Ошибка: файл '{input_path}' не может быть прочитан как текст в кодировке UTF-8.", file=sys.stderr)
+        print(f"Ошибка: файл '{input_path}' не может быть прочитан как текст в кодировке UTF-8.", file=sys.stderr)
         sys.exit(1)
 
     except Exception as e:
-        print(f"❌ Неизвестная ошибка: {e}", file=sys.stderr)
+        print(f"Неизвестная ошибка: {e}", file=sys.stderr)
         sys.exit(1)
 
 

@@ -49,31 +49,31 @@ def main():
 
         if args.cmd == "json2csv":
             json_to_csv(input_file, output_file)
-            print(f"✅ Успешно сохранено: {output_file}")
+            print(f"Успешно сохранено: {output_file}")
         elif args.cmd == "csv2json":
             csv_to_json(input_file, output_file)
-            print(f"✅ Успешно сохранено: {output_file}")
+            print(f"Успешно сохранено: {output_file}")
         elif args.cmd == "csv2xlsx":
             csv_to_xlsx(input_file, output_file)
-            print(f"✅ Успешно сохранено: {output_file}")
+            print(f"Успешно сохранено: {output_file}")
         else:
             parser.print_help()
             sys.exit(1)
 
     except FileNotFoundError:
-        print(f"❌ Ошибка: входной файл не найден — '{input_file}'", file=sys.stderr)
+        print(f"Ошибка: входной файл не найден — '{input_file}'", file=sys.stderr)
         sys.exit(1)
 
     except IsADirectoryError:
-        print(f"❌ Ошибка: путь '{input_file}' — это папка, а не файл", file=sys.stderr)
+        print(f"Ошибка: путь '{input_file}' — это папка, а не файл", file=sys.stderr)
         sys.exit(1)
 
     except PermissionError as e:
-        print(f"❌ Ошибка доступа: {e}", file=sys.stderr)
+        print(f"Ошибка доступа: {e}", file=sys.stderr)
         sys.exit(1)
 
     except Exception as e:
-        print(f"❌ Ошибка при конвертации: {e}", file=sys.stderr)
+        print(f"Ошибка при конвертации: {e}", file=sys.stderr)
         sys.exit(1)
 
 
