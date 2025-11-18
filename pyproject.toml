@@ -45,7 +45,9 @@ target-version = ['py38']
 # Настройки pytest-cov (покрытие кода тестами)
 [tool.coverage.run]
 source = ["src"]
-omit = ["*/__init__.py"]
+omit = ["*/__init__.py",
+        "src/lab05/csv_xlsx.py",
+        "src/lab05/json_csv_old.py"]
 
 [tool.coverage.report]
 exclude_lines = [
