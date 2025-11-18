@@ -6,8 +6,8 @@
 ---
 
 ## Структура
-- Код:*[Задание A](test_texts.py/)*
-      *[Задание B](test_json_csv.py/)*
+- Код:*[Задание A](tests/test_texts.py/)*
+      *[Задание B](tests/test_json_csv.py/)*
 - Скриншоты: `images/lab07/`
 
 ---
