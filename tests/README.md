@@ -283,18 +283,18 @@ def test_csv_to_json_empty_file(tmp_path: Path):
 
 **Задание - A**
 
-![Задание A](../../images/lab07/test_texts.png)
+![Задание A](../images/lab07/test_texts.png)
 
 **Задание - B**
 
-![Задание B](../../images/lab07/test_json_csv.png)
+![Задание B](../images/lab07/test_json_csv.png)
 
 **Задание - C**
 
-![Задание C](../../images/lab07/black.png)
+![Задание C](../images/lab07/black.png)
 
 **★ Дополнительное задание: покрытие кода**
 
-![Задание D](../../images/lab07/cov.png)
+![Задание D](../images/lab07/cov.png)
 
 ---
