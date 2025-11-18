@@ -28,4 +28,5 @@
   - Код: `src/lab06/`
   - Скриншоты: `images/lab06/`
   - *[README](src/lab06/README.md)*
+
 ![Gif](for_readme/Cat.gif)
