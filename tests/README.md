@@ -6,8 +6,8 @@
 ---
 
 ## Структура
-- Код:*[Задание A](tests/test_texts.py/)*
-      *[Задание B](tests/test_json_csv.py/)*
+- Код:*[Задание A](test_texts.py/)*
+      *[Задание B](test_json_csv.py/)*
 - Скриншоты: `images/lab07/`
 
 ---
@@ -287,7 +287,7 @@ def test_csv_to_json_empty_file(tmp_path: Path):
 
 **Задание - B**
 
-![Задание B](../../images/lab07/test_texts.png)
+![Задание B](../../images/lab07/test_json_csv.png)
 
 **Задание - C**
 
