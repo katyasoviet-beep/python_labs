@@ -20,12 +20,12 @@
   - Код: `src/lab05/`
   - Скриншоты: `images/lab05/`
   - *[README](src/lab05/README.md)*
-6. **CLI‑утилиты с argparse (cat/grep‑lite + конвертеры) - ❔**
+6. **CLI‑утилиты с argparse (cat/grep‑lite + конвертеры) - ✅**
   - Код: `src/lab06/`
   - Скриншоты: `images/lab06/`
   - *[README](src/lab06/README.md)*
-7. **CLI‑утилиты с argparse (cat/grep‑lite + конвертеры) - ❔**
-  - Код: `src/lab07/`
+7. **Тестирование: pytest + стиль (black) - ❔**
+  - Код: `tests/lab07/`
   - Скриншоты: `images/lab07/`
   - *[README](tests/README.md)*
 
