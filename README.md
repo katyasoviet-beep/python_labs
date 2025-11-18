@@ -27,6 +27,6 @@
 7. **CLI‑утилиты с argparse (cat/grep‑lite + конвертеры) - ❔**
   - Код: `src/lab07/`
   - Скриншоты: `images/lab07/`
-  - *[README](src/tests/README.md)*
+  - *[README](tests/README.md)*
 
 ![Gif](for_readme/Cat.gif)
