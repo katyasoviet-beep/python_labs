@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Lab07"
+version = "0.1.0"
+description = "Тесты и форматирование"
+requires-python = ">=3.8"
+
+# Указываем, что код лежит в src/
+[tool.setuptools.package-dir]
+"" = "src"
+
+#Зависимости
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "black",
+    "pytest",
+    "pytest-cov",
+]
+
+
+# Настройки pytest
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+
+# Настройки ruff (проверка стиля)
+[tool.ruff]
+select = ["E", "W", "F"]
+ignore = ["E501"]
+line-length = 88
+target-version = "py38"
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F401"]
+
+# Настройки black (автоформатирование)
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+# Настройки pytest-cov (покрытие кода тестами)
+[tool.coverage.run]
+source = ["src"]
+omit = ["*/__init__.py"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+]

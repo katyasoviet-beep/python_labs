@@ -1,5 +1,8 @@
 from typing import Tuple
+
 StudentRecord = Tuple[str, str, float]
+
+
 def format_record(rec: StudentRecord) -> str:
     fio, group, gpa = rec
     if not fio.strip() or not group.strip():
@@ -7,9 +10,11 @@ def format_record(rec: StudentRecord) -> str:
     if not isinstance(gpa, (int, float)):
         raise TypeError("GPA должен быть числом (int или float).")
     fio_parts = [part.strip() for part in fio.split()]
-    initials = "".join(part[0].upper() + '.' for part in fio_parts[1:])
+    initials = "".join(part[0].upper() + "." for part in fio_parts[1:])
     formatted_gpa = f"{gpa:.2f}"
-    formatted_record = f"{fio_parts[0]} {initials}, гр. {group.strip()}, GPA {formatted_gpa}"
+    formatted_record = (
+        f"{fio_parts[0]} {initials}, гр. {group.strip()}, GPA {formatted_gpa}"
+    )
     return formatted_record
 
 

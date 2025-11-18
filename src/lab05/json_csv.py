@@ -1,41 +1,50 @@
 from pathlib import Path
-import json, csv
+import json
+import csv
 
-def json_to_csv(json_path:str, csv_path:str) -> None:
-    json_file = Path(json_path)  # объект - файл с путем
-    if not json_file.is_file():  # проверка существования файла
+
+def json_to_csv(json_path: str, csv_path: str) -> None:
+    json_file = Path(json_path)
+    try:
+        with json_file.open("r", encoding="utf-8") as j:
+            data = json.load(j)
+        if not isinstance(data, list) or not all(
+            isinstance(item, dict) for item in data
+        ):
+            raise ValueError("Некорректный формат JSON: ожидается список словарей.")
+    except FileNotFoundError:
         raise FileNotFoundError(f"Файл {json_path} не найден.")
-    with json_file.open('r', encoding='utf-8') as j:
-        data = json.load(j)
-    if not isinstance(data, list) or not all(isinstance(item, dict) for item in data):  # Проверка на формат
-        raise ValueError("Ошибка формата")
-    keys = set()  # создаём множество ключей
-    for element in data: # проходим по всем элементам data
-        keys.update(element.keys()) # Получили ключевые слова
-        # update - добаляет новые эл-ты в множество   .keys - вытаскивает ключи из элементов
-    with open(csv_path, 'w', newline='', encoding='utf-8') as c:
-        # открываем файл csv для чтения 'w' newline - обозначает конец строки (при '' отключает преобразование строк)
-        writer = csv.DictWriter(c, fieldnames=sorted(keys))  # создаём переменную порядок колонок алфавитный
+    except json.JSONDecodeError:
+        raise ValueError(f"Ошибка парсинга JSON в файле {json_path}.")
+
+    if not data:
+        keys = []
+    else:
+        keys = set().union(*(d.keys() for d in data))
+
+    with open(csv_path, "w", newline="", encoding="utf-8") as c:
+        writer = csv.DictWriter(c, fieldnames=sorted(keys))
         writer.writeheader()
         for entry in data:
-            # заполняем недостающие элементы
-            writer.writerow({key: entry.get(key, '') for key in keys})
+            writer.writerow({k: entry.get(k, "") for k in keys})
 
 
 def csv_to_json(csv_path: str, json_path: str) -> None:
-    csv_file = Path(csv_path) # объект - файл с путем
-    if not csv_file.is_file():  # проверка на существование файла
+    csv_file = Path(csv_path)
+    if not csv_file.is_file():
         raise FileNotFoundError(f"Файл {csv_path} не найден")
     csv_data = []  # пустой список словарей
-    with csv_file.open('r', encoding='utf-8') as c: # открытие файла в режиме чтения
-        reader = csv.DictReader(c)  # читает файл как список словарей
-        for row in reader:
-            csv_data.append(row)  # добавляем ряд
+    with csv_file.open("r", encoding="utf-8") as c:
+        reader = csv.DictReader(c)
+        for row_num, row in enumerate(reader, start=2):  # start=2: строка 1 — заголовок
+            # Проверяем каждое значение
+            for key, value in row.items():
+                if value is None:
+                    raise ValueError(
+                        f"Поле '{key}' имеет значение None в строке {row_num}"
+                    )
+            csv_data.append(row)
     if not csv_data:  # проверка пусто или none
         raise ValueError("Файл пуст или плохо сформирован.")
-    with open(json_path, 'w', encoding='utf-8') as j: # открытие файла в режиме записи
-        json.dump(csv_data, j, ensure_ascii=False, indent=4)  # запись в файл ensure_ascii=False - запрет на показ не нужных символах
-
-# Тест
-csv_to_json('data/samples/people.csv', 'data/out/people_from_csv.json')
-json_to_csv('data/samples/people.json', 'data/out/people_from_json.csv')
+    with open(json_path, "w", encoding="utf-8") as j:
+        json.dump(csv_data, j, ensure_ascii=False, indent=4)

@@ -1,5 +1,5 @@
 import argparse
-import sys  
+import sys
 from pathlib import Path
 from src.lab05.json_csv import json_to_csv, csv_to_json
 from src.lab05.csv_xlsx import csv_to_xlsx
@@ -15,25 +15,47 @@ def main():
   data-converter csv2json --in data.csv --out data.json
   data-converter csv2xlsx --in data.csv --out data.xlsx
         """,
-        formatter_class=argparse.RawDescriptionHelpFormatter
+        formatter_class=argparse.RawDescriptionHelpFormatter,
     )
 
     sub = parser.add_subparsers(dest="cmd", help="Доступные команды конвертации")
 
     # Команда: json2csv
     p1 = sub.add_parser("json2csv", help="Конвертировать JSON в CSV")
-    p1.add_argument("--in", "-i", dest="input", type=Path, required=True, help="Входной JSON-файл")
-    p1.add_argument("--out", "-o", dest="output", type=Path, required=True, help="Выходной CSV-файл")
+    p1.add_argument(
+        "--in", "-i", dest="input", type=Path, required=True, help="Входной JSON-файл"
+    )
+    p1.add_argument(
+        "--out", "-o", dest="output", type=Path, required=True, help="Выходной CSV-файл"
+    )
 
     # Команда: csv2json
     p2 = sub.add_parser("csv2json", help="Конвертировать CSV в JSON")
-    p2.add_argument("--in", "-i", dest="input", type=Path, required=True, help="Входной CSV-файл")
-    p2.add_argument("--out", "-o", dest="output", type=Path, required=True, help="Выходной JSON-файл")
+    p2.add_argument(
+        "--in", "-i", dest="input", type=Path, required=True, help="Входной CSV-файл"
+    )
+    p2.add_argument(
+        "--out",
+        "-o",
+        dest="output",
+        type=Path,
+        required=True,
+        help="Выходной JSON-файл",
+    )
 
     # Команда: csv2xlsx
     p3 = sub.add_parser("csv2xlsx", help="Конвертировать CSV в XLSX")
-    p3.add_argument("--in", "-i", dest="input", type=Path, required=True, help="Входной CSV-файл")
-    p3.add_argument("--out", "-o", dest="output", type=Path, required=True, help="Выходной XLSX-файл")
+    p3.add_argument(
+        "--in", "-i", dest="input", type=Path, required=True, help="Входной CSV-файл"
+    )
+    p3.add_argument(
+        "--out",
+        "-o",
+        dest="output",
+        type=Path,
+        required=True,
+        help="Выходной XLSX-файл",
+    )
 
     args = parser.parse_args()
 
@@ -78,4 +100,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()  
+    main()

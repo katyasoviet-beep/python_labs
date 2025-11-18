@@ -1,10 +1,12 @@
 from pathlib import Path
 import csv
 
-def read_text(path, encoding = "utf-8"):
-    """ Можно выбрать другую кодировку (пример: encoding="cp1251") """
+
+def read_text(path, encoding="utf-8"):
+    """Можно выбрать другую кодировку (пример: encoding="cp1251")"""
     p = Path(path)
     return p.read_text(encoding=encoding)
+
 
 def write_csv(rows, path, header=None):
     rows = list(rows)
