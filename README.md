@@ -25,8 +25,8 @@
   - Скриншоты: `images/lab06/`
   - *[README](src/lab06/README.md)*
 7. **CLI‑утилиты с argparse (cat/grep‑lite + конвертеры) - ❔**
-  - Код: `src/lab06/`
-  - Скриншоты: `images/lab06/`
-  - *[README](src/lab06/README.md)*
+  - Код: `src/lab07/`
+  - Скриншоты: `images/lab07/`
+  - *[README](src/tests/README.md)*
 
 ![Gif](for_readme/Cat.gif)
