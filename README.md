@@ -20,13 +20,25 @@
   - Код: `src/lab05/`
   - Скриншоты: `images/lab05/`
   - *[README](src/lab05/README.md)*
-6. **CLI‑утилиты с argparse (cat/grep‑lite + конвертеры) - ❔**
+6. **CLI‑утилиты с argparse (cat/grep‑lite + конвертеры) - ✅**
   - Код: `src/lab06/`
   - Скриншоты: `images/lab06/`
   - *[README](src/lab06/README.md)*
-7. **CLI‑утилиты с argparse (cat/grep‑lite + конвертеры) - ❔**
-  - Код: `src/lab07/`
+7. **Тестирование: pytest + стиль (black) - ❔**
+  - Код: `tests/`
   - Скриншоты: `images/lab07/`
-  - *[README](src/tests/README.md)*
+  - *[README](tests/README.md)*
+8. **ЛР8 – ООП в Python: @dataclass Student, методы и сериализация - ❔**
+  - Код: `src/lab08/`
+  - Скриншоты: `images/lab08/`
+  - *[README](src/lab08/README.md)*
+9. **ЛР9 — «База данных» на CSV: класс Group, CRUD-операции и CLI - ❌**
+  - Код: `src/lab09/`
+  - Скриншоты: `images/lab09/`
+  - *[README](src/lab09/README.md)*
+10. **ЛР10 — Структуры данных: Stack, Queue, Linked List и бенчмарки - ❌**
+  - Код: `src/lab10/`
+  - Скриншоты: `images/lab10/`
+  - *[README](src/lab10/README.md)*
 
 ![Gif](for_readme/Cat.gif)
