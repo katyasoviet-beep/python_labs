@@ -138,7 +138,7 @@ students_to_json(loaded_students, "data/lab08/students_output.json")
 
 ### Проверка:
 ### Задание A.
-**people.csv**
+**models**
 
 ![Задание A](../../images/lab08/models.png)
 
