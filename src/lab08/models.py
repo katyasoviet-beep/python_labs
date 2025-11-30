@@ -49,7 +49,7 @@ class Student:
         return f"{self.fio}, {self.birthdate}, {self.group}, {self.gpa}"
         
 # Пример
-'''
+
 s = Student("Иванов Иван Иванович", "2005/05/15", "SE-01", 4.5)
 print(s)                   
 print(s.age())              
@@ -57,4 +57,4 @@ data = s.to_dict()
 print(data)          
 s2 = Student.from_dict(data) 
 print(s2)
-'''
+
