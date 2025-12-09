@@ -126,7 +126,7 @@ class Group:
 ### Задание A.
 **groups**
 
-# через код **examples.py**
+### Через код **examples.py**
 
 ```
 from src.lab09.group import Group
@@ -135,8 +135,10 @@ from src.lab08.models import Student
 
 # Создаём экземпляр группы
 group = Group("data/lab09/students.csv")
+```
+![Задание A](../../images/lab09/st_csv.png)
 
-
+```
 # ===================================================================
 # 1. list() — получить всех студентов
 # ===================================================================
