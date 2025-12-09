@@ -144,8 +144,16 @@ students_to_json(loaded_students, "data/lab08/students_output.json")
 
 
 ### Задание B.
+**input**
+
+![Задание B](../../images/lab08/input.png)
+
 **serialize**
 
 ![Задание B](../../images/lab08/serialize.png)
+
+**output**
+
+![Задание B](../../images/lab08/output.png)
 
 ---
