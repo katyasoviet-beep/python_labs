@@ -32,7 +32,7 @@
   - Код: `src/lab08/`
   - Скриншоты: `images/lab08/`
   - *[README](src/lab08/README.md)*
-9. **ЛР9 — «База данных» на CSV: класс Group, CRUD-операции и CLI - ❌**
+9. **ЛР9 — «База данных» на CSV: класс Group, CRUD-операции и CLI - ❔**
   - Код: `src/lab09/`
   - Скриншоты: `images/lab09/`
   - *[README](src/lab09/README.md)*
