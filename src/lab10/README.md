@@ -1,6 +1,7 @@
 # ЛР10 — Структуры данных: Stack, Queue, Linked List и бенчмарки
 ## Структура
 - Код:*[Задание А](structures.py/)*
+- Код:*[Задание B](linked_list.py/)*
 - Скриншоты: `images/lab10/`
 
 ---
